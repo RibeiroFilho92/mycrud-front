@@ -18,7 +18,7 @@ class AutorTable extends Component {
         openViewBooks: false,
         newName: '',
         currentId: 1,
-        autorBooks:[]
+        autorBooks:[],
     }
 
     componentDidMount() {
@@ -151,6 +151,8 @@ class AutorTable extends Component {
     handleDeleteBook = (id) => {
 
         BooksService.deleteBook(id);
+        window.location.reload();
+        console.log(this.state.currentId)
 
     }
 
@@ -170,8 +172,8 @@ class AutorTable extends Component {
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Autor's name</th>
-                        <th><input type="search" onChange={this.handleFindAutor} value={this.state.findAutor} /></th>
+                        <th>Autor name</th>
+                        <th><input className="form-control" placeholder="Search" type="search" onChange={this.handleFindAutor} value={this.state.findAutor} /></th>
                     </tr>
                 </thead>
                 <tbody>

@@ -4,10 +4,6 @@ const autors_rest_api = 'http://localhost:8080/autors';
 
 class AutorsService {
 
-    state = {
-        getBooks: []
-    }
-
     getAutors() {
 
         return Axios.get(autors_rest_api);

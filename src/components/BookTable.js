@@ -129,8 +129,8 @@ class BookTable extends Component {
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Book's name</th>
-                        <th><input type="search" onChange={this.handleFindBook} value={this.state.findBook} /></th>
+                        <th scope="col">Book name</th>
+                        <th><input className="form-control" placeholder="Search" type="search" onChange={this.handleFindBook} value={this.state.findBook} /></th>
                     </tr>
                 </thead>
                 <tbody>
